@@ -1,0 +1,37 @@
+<div class="signup__container">
+  <div class="container__child signup__form">
+    <form (ngSubmit)="onSubmit()" #f="ngForm">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input class="form-control" type="text" name="" ngModel name="username" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" class="form-control"  (ngModel) = "userData.email" name="email" required email>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input class="form-control" type="password" name="" ngModel name="password" required />
+      </div>
+      <div class="form-group">
+        <label for="passwordRepeat">Repeat Password</label>
+        <input class="form-control" type="password" name="" ngModel name="passwordRequired" required />
+      </div>
+      <div class="form-group" *ngIf="isRegister">
+        <label for="passwordRepeat">OTP</label>
+        <input class="form-control" type="password" name="" ngModel name="otp"  />
+      </div>
+      <div class="m-t-lg">
+        <ul class="list-inline">
+          <li>
+            <input class="btn btn--form" type="submit" [disabled]='!f.valid' value="Register"    />
+          </li>
+          <li>
+            <a class="signup__link" (click)="logIn()">I am already a member</a>
+          </li>
+        </ul>
+      </div>
+    </form>  
+  </div>
+</div>
+

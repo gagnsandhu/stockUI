@@ -1,0 +1,25 @@
+<!-- <app-login *ngIf="!getLogin()"></app-login>
+ <app-signup></app-signup> -->
+<!-- <app-sign-up></app-sign-up> -->
+
+<!-- <div class="m-0 " *ngIf="getLogin()"><app-navbar></app-navbar></div>
+<div class="d-flex w-100" *ngIf="getLogin()">
+    <div class="m-0 w-25"><app-sidebar></app-sidebar></div> 
+    <div class="w-75"><router-outlet></router-outlet></div>
+ </div>  -->
+
+
+<!-- 
+ <app-auth *ngIf="!getLogin()" ></app-auth> -->
+ <!-- <app-home *ngIf="getLogin()"></app-home> -->
+ <div>
+ <div *ngIf="getLogin()">
+    <app-navbar></app-navbar>
+ </div>
+ <div class="d-flex">
+    <div class="w-25" *ngIf="getLogin()"><app-sidebar></app-sidebar></div>
+    <div class="w-75"><router-outlet></router-outlet></div>
+    <!-- <div class="w-75" *ngIf="getLogin()"><router-outlet></router-outlet></div> -->
+ </div>
+ </div>
+
